@@ -18,24 +18,24 @@ namespace Integration_testing
 
 
         [SetUp]
-        public void startBrowser()
+        public void startBrowser()          // start of chrome
         {
             driver = new ChromeDriver();                      
         }
         [Test]
         public void test()
         {
-            driver.Navigate().GoToUrl("http://www.google.com/");
+            driver.Navigate().GoToUrl("http://www.google.com/");        //goint in google
             IWebElement element1 = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[1]/div[1]/div/div[2]/input"));
-            element1.SendKeys("bangladesh");                        
+            element1.SendKeys("bangladesh");               //searching bangladesh         
 
             IWebElement element2 = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[1]/div[3]/center/input[1]"));
-            element2.Click();                                  
+            element2.Click();                             //clicking okay/search/enter     
         }
         [TearDown]
         public void closeBrowser()
         {
-            driver.Close();                                   
+            driver.Close();            //closing chrome                       
         }
     }
 }
