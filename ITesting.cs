@@ -33,7 +33,7 @@ namespace Integration_Testing
             IWebElement element = driver.FindElement(By.Name("username"));
             element.SendKeys("170042010");                   
             IWebElement password = driver.FindElement(By.Name("password"));
-            password.SendKeys("@26051998Nafis");               
+            password.SendKeys("Abc.1234");               
             driver.FindElement(By.Id("loginbtn")).Click();    
             String at = driver.Title;
             String et = "Dashboard";                         
@@ -49,7 +49,7 @@ namespace Integration_Testing
         [TearDown]
         public void closeBrowser()
         {
-            driver.Close();                                     //Browser will be closed
+            driver.Close();                              
         }
     }
 }
